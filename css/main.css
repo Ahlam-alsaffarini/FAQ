@@ -67,6 +67,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition-duration: 1s;
 }
 
 .box {
@@ -222,7 +224,7 @@ body {
     width: 720px;
   }
   .content {
-    padding: 20px;
+    padding: 0px 20px 10px;
   }
   .content .txt {
     width: 95%;
@@ -237,10 +239,6 @@ body {
     left: -80px;
     width: 400px;
   }
-}
-
-.clearfix {
-  clear: both;
 }
 
 .attribution {

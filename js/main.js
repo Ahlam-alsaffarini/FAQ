@@ -14,3 +14,7 @@ arrows.forEach((arrow) =>
     }
   })
 );
+
+setTimeout(() => {
+  document.querySelector(".FAQ").style.opacity = "1";
+}, 500);
