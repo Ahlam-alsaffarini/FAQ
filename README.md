@@ -6,7 +6,7 @@
 <br>
 
 <div align="center">
-   <a href="https://ahlam-alsaffarini.github.io/1-interactive-rating/">Demo </a>
+   <a href="https://ahlam-alsaffarini.github.io/FAQ/">Demo </a>
    <span> | </span>
    <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam">Challenge </a>
 </div>
