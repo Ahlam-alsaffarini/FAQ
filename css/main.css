@@ -1,0 +1,257 @@
+:root {
+  /* Dividers */
+  --Light-grayish-blue: hsl(0deg 0% 96.85%);
+  --line-Gray: hsl(240, 5%, 91%);
+  /* Text */
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Gradient */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  /* Text */
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  /* weight 400:700 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.FAQ {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    var(--Soft-violet),
+    var(--Soft-blue)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: var(--Light-grayish-blue);
+  display: flex;
+  border-radius: 30px;
+  width: 930px;
+  height: 480px;
+  box-shadow: hsl(238deg 29% 16% / 50%) 0px 15px 20px 0px;
+}
+
+.images-desktop {
+  flex: 1;
+}
+.images-desktop .overflow {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.images-desktop .overflow img:first-child {
+  width: 100%;
+  position: absolute;
+  left: 40%;
+  top: -49px;
+  transform: scaleX(2) scaleY(2) translateX(-53%);
+}
+.images-desktop .overflow img:last-child {
+  position: absolute;
+  left: -82px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.images-desktop .no-overflow {
+  position: absolute;
+}
+.images-desktop .no-overflow img {
+  position: absolute;
+  left: -92px;
+  top: 177px;
+  z-index: 2;
+  animation: up-down 3s linear infinite;
+}
+
+.images-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .box {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .images-mobile {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .images-mobile img:first-child {
+    position: absolute;
+    width: 250px;
+    top: -116px;
+    animation: up-down 3s linear infinite;
+  }
+  .images-desktop {
+    display: none;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.content {
+  flex: 1;
+  padding-right: 30px;
+}
+.content h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+}
+.content .txt {
+  position: relative;
+  width: 400px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line-Gray);
+}
+
+.content .txt img {
+  position: absolute;
+  right: 0px;
+  width: 15px;
+  cursor: pointer;
+  transform: rotate(0deg);
+}
+
+.content .txt h4 {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.content .txt p {
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+  display: none;
+  padding-bottom: 20px;
+  max-width: 95%;
+}
+
+.content .txt.active img {
+  transform: rotate(180deg);
+}
+.content .txt.active h4 {
+  font-weight: 700;
+  color: var(--Very-dark-grayish-blue);
+}
+.content .txt.active p {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding: 0 20px 20px;
+  }
+  .content .txt {
+    width: 100%;
+    min-width: 470px;
+  }
+  .content .txt img {
+    top: 5px;
+  }
+}
+@media (max-width: 375px) {
+  .content .txt {
+    min-width: 305px;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .box {
+    width: 720px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .content .txt {
+    width: 95%;
+  }
+  .images-desktop .overflow img:first-child {
+    height: 100%;
+    left: 55%;
+    top: 0px;
+    transform: scaleX(1.5) scaleY(1.1) translateX(-58%);
+  }
+  .images-desktop .overflow img:last-child {
+    left: -80px;
+    width: 400px;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 50px;
+
+  color: white;
+}
+.attribution a {
+  color: var(--Soft-red);
+  text-decoration: none;
+  font-weight: 700;
+}
